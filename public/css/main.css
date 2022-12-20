@@ -1,0 +1,154 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: p-regular ;
+    src: url("../font/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: p-semi;
+    src: url("../font/Poppins-SemiBold.ttf");
+}
+header{
+    width:100%;
+    max-height: 70px;
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+}
+header .brand img{
+    width: 100px;
+}
+header nav ul{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+header nav ul li{
+    list-style: none;
+    position: relative;
+    width:7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li a{
+    min-width: 7vw;
+    position: absolute;
+    font-family: p-regular;
+    text-decoration: none;
+    color:#262626;
+    font-size: 15px;
+    text-align: center;
+}
+header button{
+    background-color:transparent;
+    font-size: 14px;
+    font-family: p-regular;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    transition: .5s;
+}
+header button:hover{
+    background-color: #262626;
+    color: #fff;
+}
+header nav ul li a.active::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    bottom: -10px;
+    left: 47%;
+    background-color: #262626;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+header nav ul li a:hover{
+    color:#000;
+    font-weight: bolder;
+}
+header nav ul li a.active{
+    font-weight: bolder;
+}
+.one{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0px 10vh 10vw;
+    background:linear-gradient(174.42deg, #FEFFFC 13.93%, #EBECE9 63.06%);
+    overflow: hidden;
+    z-index: -1;
+}
+.content{
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 22vh 0px;
+}
+.image{
+    width:60vw;
+    position: relative;
+}
+.image .imageContainer{
+    width:100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image .imageContainer img{
+    width: 90%;
+    right: 0;
+    position: absolute;
+}
+.head{
+    font-family: p-semi;
+    font-size: 3vw;
+}
+.role{
+    font-family: p-regular;
+    font-size: 26px;
+}
+.description{
+    font-family: p-regular;
+    width: 90%;
+}
+.btnGrp button{
+    width: 10vw;
+    height: 6vh;
+    background-color:transparent;
+    border: transparent;
+    font-size: 16px;
+    font-family: p-regular;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+.btnGrp button:nth-child(1){
+    background-color: #262626;
+    color:#fff;
+}
+.btnGrp button:nth-child(2){
+    border: 1px solid #262626;
+    margin-left: 10px;
+    transition: .5s;
+}
+.btnGrp button:nth-child(2):hover{
+    background-color: #262626;
+    color:#fff
+}
