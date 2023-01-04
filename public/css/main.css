@@ -11,15 +11,35 @@
     font-family: p-semi;
     src: url("../font/Poppins-SemiBold.ttf");
 }
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .sticky {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.1);  
+    }
+    
+  }
+  .sticky{
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
 header{
     width:100%;
-    max-height: 70px;
     overflow: hidden;
     position: fixed;
+    z-index: 2;
+}
+header .wrapper{
+    width: 90%;
+    margin: 0px 5% auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 40px;
+    padding: 20px 10px 10px 10px;
+}
+header .brand{
+    display: flex;
+    justify-content: space-between;
 }
 header .brand img{
     width: 100px;
@@ -89,7 +109,7 @@ header nav ul li a.active{
     padding: 10vh 0px 10vh 10vw;
     background:linear-gradient(174.42deg, #FEFFFC 13.93%, #EBECE9 63.06%);
     overflow: hidden;
-    z-index: -1;
+    z-index: 1;
 }
 .content{
     width: 40vw;
@@ -98,7 +118,7 @@ header nav ul li a.active{
     position: relative;
     flex-direction: column;
     justify-content: space-around;
-    padding: 22vh 0px;
+    padding: 20vh 0px;
 }
 .image{
     width:60vw;
@@ -112,9 +132,7 @@ header nav ul li a.active{
     align-items: center;
 }
 .image .imageContainer img{
-    width: 90%;
-    right: 0;
-    position: absolute;
+    width: 100%;
 }
 .head{
     font-family: p-semi;
@@ -126,8 +144,10 @@ header nav ul li a.active{
 }
 .description{
     font-family: p-regular;
-    width: 90%;
+    width: 95%;
+    padding-top: 10px;
 }
+
 .btnGrp button{
     width: 10vw;
     height: 6vh;
@@ -138,6 +158,10 @@ header nav ul li a.active{
     cursor: pointer;
     position: relative;
     z-index: 2;
+    margin-top: 10px;
+}
+.menuOption{
+    display: none;
 }
 .btnGrp button:nth-child(1){
     background-color: #262626;
@@ -151,4 +175,575 @@ header nav ul li a.active{
 .btnGrp button:nth-child(2):hover{
     background-color: #262626;
     color:#fff
+}
+.menuOption{
+    width: 35px;
+    height: 35px;
+    padding: 0px;
+    font-size: 30px;
+    border: none;
+}
+.social{
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+.sicon{
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 20px;
+    color: #262626;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+.sicon:hover{
+    background:rgba(0, 0, 0, 0.2);
+}
+section{
+    width:100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.skill{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.languagePart{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.skillillu{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.logoWrapper{
+    width: 70%;
+    height: 80%;
+    position: relative;
+    /* background-color: red; */
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+.logoWrapper img{
+    width: 100%;
+    padding: 30px;
+}
+.skillWrapper{
+    width: 50%;
+    position: relative;
+    border-radius: 5px;
+}
+.skillWrapper img{
+    width: 100%;
+}
+.skillSection{
+    padding: 100px;
+    font-family: p-semi;
+}
+.love span{
+    font-family: p-regular;
+    font-size: 14px;
+    text-align: center;
+    /* color:#ff9204 */
+    padding: 0px 10px;
+    color:#262626;
+}
+.love{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#3f3f3f;
+    padding: 10px;
+}
+.certifiContainer{
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+.certifiContainer h1{
+    font-family: p-semi;
+    font-size:30px;
+}
+.certifyFlex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.illuContainer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.illuContainer img{
+    width: 70%;
+}
+.cCollections{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.collectionContainer{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.row{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: scroll-y 10s alternate infinite;
+}
+.col{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.col div{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.col div img{
+    width: 100%;
+}
+.col div p{
+    font-family: p-regular;
+    text-align: center;
+}
+.col div p:nth-child(2){
+    font-size: 14px;
+}
+.col div p:nth-child(3){
+    font-size:12px;
+}
+.certifiSection{
+    margin-top: 20px;
+    background-color: #aee1ff28;
+}
+.collectionContainer img{
+    width:50%;
+}
+.plant{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 15%;
+    top:2%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    z-index: 3;
+}
+.round{
+    width: 20%;
+    height: 50%;
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    border-radius: 50%;
+    animation: grow 5s alternate infinite;
+    z-index: -1;
+}
+.round1{
+    background-color:#E9FCE1;
+}
+.round2{
+    background-color: #4649ff17;
+    margin-top: 20%;
+    animation: grow 5s alternate-reverse infinite;
+
+}
+.round3{
+    background-color: #FCEAE1;
+    margin-top: 40%;
+    animation: grow 5s alternate infinite;
+}
+.thanks{
+    text-align: center;
+    font-family: p-regular;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 0, 55);
+    font-size: 30px;
+}
+.thanks span{
+    color:#262626;
+    font-size: 14px;
+    padding: 10px;
+}
+.plant img{
+    width: 100%;
+}
+.blob{
+    width:70%;
+    height:70%;
+    position: absolute;
+    background: linear-gradient(90deg,#fe8c0013,#f8360018);
+    border-radius:67% 33% 43% 57% / 43% 34% 66% 57% ;
+    z-index: -1;
+    animation: rotate 3s alternate infinite ;
+}
+@keyframes grow {
+    from{
+        width: 100px;
+        height: 100px;
+    }
+    to{
+        width: 300px;
+        height: 300px;
+    }
+}
+@keyframes scroll-y {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-160%);
+    }
+
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    border-radius:67% 33% 43% 57% / 43% 34% 66% 57% ;
+
+    }
+    to{
+        transform: rotate(360deg);
+        border-radius:24% 76% 43% 57% / 43% 54% 46% 57% 
+    }
+}
+@media screen and (max-width:576px) {
+    .certifiSection{
+        padding-top: 40px;
+    }
+    .certifiContainer h1{
+        font-size: 25px;
+    }
+    .thanks{
+        display: flex;
+        font-size: 50px;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .thanks span{
+        padding: 0px;
+    }
+    .thanks span:nth-child(1){
+        margin-right: 10px;
+    }
+        .thanks span:nth-child(3){
+        padding-left: 5px;
+    }
+    .col div{
+        padding: 5px;
+    }
+
+    @keyframes grow {
+        from{
+            width: 20px;
+            height: 20px;
+        }
+        to{
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .plant{
+        width:100px;
+        height: 100px;
+        top: 42%;
+        right:5%
+    }
+    .certifyFlex{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .illuContainer{
+        width: 100%;
+        height: 40%;
+    }
+    .cCollections{
+        width: 100%;
+        height: 70%;
+        padding: 5px;
+    }
+    .certifiContainer{
+        padding: 10px;
+    }
+    .skillWrapper img{
+        width: 80%;
+    }
+    @keyframes scroll-y {
+        from{
+            transform: translateY(0);
+        }
+        to{
+            transform: translateY(-100%);
+        }
+    
+    }
+    .skillWrapper{
+        width: 80%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .logoWrapper{
+        width: 90%;
+    }
+    .skillillu{
+        width: 100%;
+    }
+    .languagePart{
+        width: 100%;
+        height: 50%;
+    }
+    .skillSection{
+        padding: 50px 10px;
+    }
+    .skill{
+        width: 100%;
+        flex-direction: column-reverse;
+        padding: 0px;
+    }
+    header .wrapper{
+        width: 100%;
+        margin: 0px 0px;
+        padding: 20px 20px;
+    }
+    nav{
+        display: none;
+    }
+    .talk{
+        display: none;
+    }
+    .one{
+        width: 100%;
+        flex-direction: column;
+        padding: 0px;
+        justify-content: space-around;
+    }
+    .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        left: 0;
+        top: 0;
+        justify-content: space-between;
+        position: absolute;
+        text-align: center;
+        padding: 16vh 10px 20px 10px ;
+    }
+    .description{
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .head{
+        font-size: 29px;
+    }
+    .role{
+        font-size: 18px;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100vh;
+        padding: 100px 10px  10px 10px ;
+    }
+    .btnGrp button{
+        width: 120px;
+    }
+    .image .imageContainer img{
+        width: 120%;
+        margin-top: -70px;
+    }
+    .image .imageContainer{
+        width: 100%;
+        height: 100vh;
+    }
+    .brand{
+        width: 100%;
+    }
+    .menuOption{
+        display: block;
+    }
+    .social{
+        justify-content: space-around;
+    }
+    .sicon{
+        margin-right: 0px;
+    }
+    
+}
+@media screen and (min-width:576.5px) and (max-width:768px) {
+    @keyframes scroll-y {
+        from{
+            transform: translateY(0);
+        }
+        to{
+            transform: translateY(-220%);
+        }
+    
+    }
+    .illuContainer{
+        padding: 5px;
+    }
+    .plant{
+        opacity: 0;
+    }
+    .cCollections{
+        height: 70%;
+        padding: 5px;
+    }
+    @keyframes grow {
+        from{
+            width: 50px;
+            height: 50px;
+        }
+        to{
+            width: 175px;
+            height: 175px;
+        }
+    }
+    .certifiContainer{
+        padding: 10px;
+    }
+    .languagePart{
+        width:80%;
+        height: 100%;
+    }
+    .skillSection{
+        padding: 30px 10px;
+        height: 100vh;
+    }
+    section{
+        width:100%;
+        height: auto;
+    }
+    header .wrapper{
+        width: 100%;
+        margin: 0px 0px;
+        padding: 20px 20px;
+    }
+    nav{
+        display: none;
+    }
+    .talk{
+        display: none;
+    }
+    .one{
+        width: 100%;
+        height: 200vh;
+        max-height: 400vh;
+        flex-direction: column;
+        padding: 0px;
+        justify-content: flex-start;
+    }
+    .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        left: 0;
+        top: 0;
+        justify-content: space-between;
+        position: absolute;
+        text-align: center;
+        padding: 16vh 10px 20px 10px ;
+    }
+    .description{
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .head{
+        font-size: 29px;
+    }
+    .role{
+        font-size: 18px;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100vh;
+        padding: 100px 10px  10px 10px ;
+    }
+    .btnGrp button{
+        width: 120px;
+        height: 40px;
+    }
+    .image .imageContainer img{
+        width: 120%;
+    }
+    .image .imageContainer{
+        width: 100%;
+    }
+    .brand{
+        width: 100%;
+    }
+    .menuOption{
+        display: block;
+    }
+    .social{
+        justify-content: space-around;
+    }
+    .sicon{
+        margin-right: 0px;
+    }
+}
+@media  screen and (max-width:300px) {
+    .head{
+        font-size: 25px;
+    }
 }
