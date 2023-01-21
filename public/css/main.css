@@ -244,7 +244,6 @@ section{
     width: 70%;
     height: 80%;
     position: relative;
-    /* background-color: red; */
     overflow: hidden;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
@@ -432,6 +431,121 @@ section{
     z-index: -1;
     animation: rotate 3s alternate infinite ;
 }
+.contact{
+    width: 100%;
+    height: 90vh;
+}
+.contact h1{
+    font-family: p-semi;
+    font-size:30px;
+}
+.box{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.box input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0px;
+    font-size: 13px;
+    padding-left: 5px;
+    border: .5px solid rgb(216, 216, 216);
+    font-family: p-regular;
+    outline: none;
+}
+input.submit{
+    width: 50%;
+    height: 35px;
+    font-size: 14px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#262626;
+    color: #fff;
+    border-radius: 5px;
+}
+.box input:focus{
+    border:1px solid grey;
+}
+.box textarea:focus{
+    border:1px solid grey;
+}
+.box textarea{
+    width:100%;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 14px;
+    outline: none;
+    margin: 10px 0px;
+    font-family: p-regular;
+    border: .5px solid rgb(216, 216, 216);
+
+}
+
+.box label{
+    font-family:p-regular;
+}
+.contentWrapp{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+.leftc{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightc{
+    width: 50%;
+    position: relative;
+}
+.contact{
+    padding: 40px;
+}
+.rightc .rightImg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightc .rightImg img{
+    width: 90%;
+}
+.quote{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 10%;
+    top:10%;
+    font-family:p-regular;
+}
+.quote p{
+    min-width: 20%;
+    text-align: center;
+    padding: 5px;
+    color:#262626;
+    position: absolute;
+    border-radius: 2px;
+}
+.quote p:nth-child(1){
+    transform: rotate(-40deg);
+}
+.quote p:nth-child(2){
+    right: 0;
+    transform: rotate(40deg);
+}
+.quote p:nth-child(3){
+    bottom:0;
+    left: 40%;
+}
 @keyframes grow {
     from{
         width: 100px;
@@ -463,6 +577,50 @@ section{
     }
 }
 @media screen and (max-width:576px) {
+    .box{
+        padding: 10px 20px;
+        margin-top: -35%;
+    }
+    .box input{
+        margin: 2px 0px;
+    }
+    .box textarea{
+        margin: 2px 0px;
+        height: 60px;
+    }
+    .quote p:nth-child(1){
+        transform: rotate(0deg);
+        left: -5%;
+    }
+    .quote p:nth-child(2){
+        right: -5%;
+        transform: rotate(0deg);
+    }
+    .quote p:nth-child(3){
+        bottom:17%;
+        left: 20%;
+    }
+    .rightc .rightImg img{
+        width: 80%;
+        position: relative;
+        top: -5%;
+    }
+    .leftc{
+        width:100%;
+        height: 40%;
+    }
+    .rightc{
+        width: 100%;
+        height: 60%;
+    }
+    .contentWrapp{
+        flex-direction: column-reverse;
+    }
+    .contact{
+        width: 100%;
+        height: 100vh;
+        padding: 10px;
+    }
     .certifiSection{
         padding-top: 40px;
     }
@@ -628,6 +786,26 @@ section{
     
 }
 @media screen and (min-width:576.5px) and (max-width:768px) {
+    .quote p:nth-child(1){
+        transform: rotate(0deg);
+        left: -5%;
+    }
+    .quote p:nth-child(2){
+        right: -5%;
+        transform: rotate(0deg);
+    }
+    .quote p:nth-child(3){
+        bottom:10%;
+        left: 20%;
+    }
+    .contact{
+        width:100%;
+        height: auto;
+        padding: 10px;
+    }
+    .contact h1{
+        padding:20px;
+    }
     @keyframes scroll-y {
         from{
             transform: translateY(0);
@@ -745,5 +923,8 @@ section{
 @media  screen and (max-width:300px) {
     .head{
         font-size: 25px;
+    }
+    .quote p:nth-child(3){
+        left: 10%;
     }
 }
