@@ -1,5 +1,12 @@
 $(document).on('click','#menu',function(){
     $('[id=menu]').removeClass('active')
+    if (window.matchMedia("(max-width: 767px)").matches) 
+    {
+        $('nav').animate({opacity: '0'}, 1000);
+        $('nav').css('display','none')
+        $('#header').removeClass('extheader')
+    }
+    
     $(this).toggleClass('active')
     let hash = this.hash
     $('html,body').animate({
@@ -29,7 +36,19 @@ $(window).scroll(function (event) {
         });
     }
 });
-$("#skillm").click(function() {
-    console.log('he');
-    
-});
+let navVisible = false
+$('#menubtn').click(function(){
+    console.log('helo');
+    $('nav').css('display','block')
+    $('nav').css('opacity','1')
+    $('#header').addClass('extheader')
+})
+
+window.addEventListener('click',function(e){
+    console.log(e.target.className);
+    if(e.target.className=='extheader' || e.target.className=='wrapper' || e.target.className=='bImg' ){
+        $('nav').animate({opacity: '0'}, 1000);
+        $('nav').css('display','none')
+        $('#header').removeClass('extheader')
+    }
+})
